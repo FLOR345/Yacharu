@@ -2,6 +2,12 @@
 
 ## Sin publicar (camino a v1.0.0)
 
+### Cambiado
+
+- **Relicencia del código de MIT a AGPL-3.0-or-later**, conforme al `LICENSE` proporcionado: versión 3 o posterior. Quien distribuya una versión modificada cubierta debe proporcionar su fuente correspondiente; si permite interactuar con esa versión por una red, debe ofrecer esa fuente de forma visible y gratuita (sección 13). El audio generado mantiene su CC BY-NC 4.0 y el vocabulario aymara su CC BY 4.0. Las copias distribuidas antes de este cambio conservan los permisos MIT que ya recibieron.
+- Retirados cinco SQL históricos incompatibles o sustituidos y una plantilla interna de correos, con respaldo ZIP y manifiesto SHA-256. Se conservan el esquema actual, las migraciones incrementales y el contenido necesario para Docker y CI. Ver `docs/limpieza-2026-11-17.md` y `docs/revision-2026-11-17.md`.
+- Preparación para compartir código: exclusiones de entornos y respaldos privados, lista pública de archivos de base de datos y comprobación local/CI sin red. La revisión del historial detectó credenciales antiguas; ver `docs/publicacion.md` antes de reutilizar ese historial.
+
 ### Agregado
 
 - Pruebas del modo aula (`database/migrations/006_pruebas.sql`), de dos tipos:

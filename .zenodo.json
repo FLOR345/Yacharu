@@ -1,7 +1,7 @@
 {
   "title": "YachAru: An open-source, extensible web platform for teaching and studying Quechua and Aymara with neural speech synthesis and learner-level data export",
   "upload_type": "software",
-  "license": "MIT",
+  "license": "AGPL-3.0-or-later",
   "creators": [{ "name": "Yeferson Dariun" }],
   "keywords": ["Quechua", "Aymara", "language revitalization", "neural speech synthesis", "learning analytics"]
 }

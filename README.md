@@ -12,7 +12,7 @@
 
 | | YachAru |
 | --- | --- |
-| **Open and auditable** | MIT-licensed code; anyone can inspect, modify and deploy it. |
+| **Open and auditable** | AGPL-3.0 code; anyone can inspect, modify and deploy it, and any modified version offered as a service must publish its source. |
 | **Speech trained on the language** | Audio is pre-generated once with Meta's MMS models (`facebook/mms-tts-quz` for Cusco-Collao Quechua, `facebook/mms-tts-ayr` for Central Aymara) instead of a Spanish synthesizer that erases glottalized and aspirated consonants. |
 | **Research instrument** | Learning events (answer, result, response time, audio plays) are recorded **only with explicit consent**, pseudonymized, and exportable as CSV/JSON. |
 | **Extensible by language packs** | A new language is one configuration file and one command. No application code changes. |
@@ -103,12 +103,16 @@ docs/            documentation
 - A language model was deliberately **not** used to generate Quechua or Aymara content (invented morphology, mixed varieties), and speech recognition was **not** used to grade pronunciation (high error rates in these languages make false negatives discouraging).
 - Learning data is collected only with consent, can be downloaded and deleted by the learner, and is exported only under a pseudonym.
 
+## Before sharing code
+
+Before publishing changes, run `node tools/check-publication.mjs` from the repository root. See [database contents](database/README.md) and the [publication guide](docs/publicacion.md), including credentials found in an old commit that must be revoked if still active. Current database files contain structure, educational content and synthetic samples.
+
 ## Licenses
 
-- **Code:** [MIT](LICENSE).
+- **Code:** [AGPL-3.0-or-later](LICENSE). You may use, modify and redistribute it under its terms. When you distribute a covered modified version, provide its corresponding source; when users interact with your modified version over a network, prominently offer them that source at no charge (section 13).
 - **Generated audio:** [CC BY-NC 4.0](LICENSE-AUDIO.md), inherited from the MMS models.
-- **Visual effects** (`frontend/src/components/fx/`): written for YachAru, MIT like the rest of the code.
-- **Linguistic content:** not covered by the MIT license. The Aymara vocabulary comes from Félix Layme Pairumani's Central Aymara list in the Intercontinental Dictionary Series (CC BY 4.0); see `languages/aymara/README.md`.
+- **Visual effects** (`frontend/src/components/fx/`): written for YachAru, AGPL-3.0 like the rest of the code.
+- **Linguistic content:** not covered by the AGPL license. The Aymara vocabulary comes from Félix Layme Pairumani's Central Aymara list in the Intercontinental Dictionary Series (CC BY 4.0); see `languages/aymara/README.md`.
 
 ## Cite
 

@@ -25,7 +25,7 @@ El éxito tiene dos medidas: que un aprendiz vuelva cada día y avance de lecci�
 
 ## Positioning
 
-Es la plataforma **abierta y auditable** (código MIT) para quechua y aymara. **(inferido)** Su objetivo es:
+Es la plataforma **abierta y auditable** (código AGPL-3.0) para quechua y aymara. **(inferido)** Su objetivo es:
 - pronunciar con voz entrenada en esas lenguas, en lugar del sintetizador de español;
 - exportar datos de aprendizaje;
 - crecer a nuevas lenguas mediante paquetes de configuración.
@@ -52,7 +52,7 @@ Ninguna alternativa conocida (Duolingo, la app del Minedu, Yachay Quechua) reún
   - 902 ejercicios, 69 contenidos culturales y 7 insignias.
 - **Variedades:** quechua Cusco-Collao (la de Puno) y aymara central.
 - **Interfaz en español** (`lang="es"`). Las palabras originarias contienen glotalizadas (`p'`, `t'`, `k'`, `q'`) y aspiradas (`ph`, `kh`…), que cambian el significado: su escritura y su pronunciación no se pueden simplificar.
-- **Audio:** audio pregenerado con los modelos MMS de Meta (`quz` y `ayr`), con licencia **CC BY-NC 4.0**, separada de la licencia MIT del código. Se genera en línea con el flujo `Audio MMS`, contra Neon y Cloudinary. Las voces grabadas se conservan y se etiquetan como tales. La voz del navegador en español queda solo como respaldo de lo que aún no tiene audio.
+- **Audio:** audio pregenerado con los modelos MMS de Meta (`quz` y `ayr`), con licencia **CC BY-NC 4.0**, separada de la licencia AGPL-3.0 del código. Se genera en línea con el flujo `Audio MMS`, contra Neon y Cloudinary. Las voces grabadas se conservan y se etiquetan como tales. La voz del navegador en español queda solo como respaldo de lo que aún no tiene audio.
 - **Datos, aula, PWA y corrector:** exportación de eventos con consentimiento, modo aula por código, PWA sin conexión y normalizador dialectal.
 - **Validación en línea:** `/validacion` (revisión del léxico).
 - **Paquetes de idioma:** un archivo de configuración y un comando. El awajún es una demostración técnica sin revisión de hablantes y no se publica en la plataforma.

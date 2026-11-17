@@ -7,7 +7,7 @@ authors:
     alias: DariunLv
 repository-code: "https://github.com/FLOR345/YachAru"
 url: "https://simiaru-3j6b.vercel.app"
-license: MIT
+license: AGPL-3.0-or-later
 version: 1.0.0
 keywords:
   - Quechua

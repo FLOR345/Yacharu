@@ -67,6 +67,6 @@ All suites run in CI on every commit (`.github/workflows/ci.yml`), against a Pos
 
 ## Licenses
 
-- Code: MIT (`LICENSE`).
+- Code: AGPL-3.0-or-later (`LICENSE`), an OSI-approved copyleft license.
 - Generated audio: CC BY-NC 4.0, inherited from the MMS models (`LICENSE-AUDIO.md`).
-- Visual effects in `frontend/src/components/fx/` were written for this project and are MIT like the rest of the code.
+- Visual effects in `frontend/src/components/fx/` were written for this project and are AGPL-3.0 like the rest of the code.

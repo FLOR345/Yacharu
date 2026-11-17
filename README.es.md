@@ -59,7 +59,17 @@ La app queda en http://localhost:8080 y la API en http://localhost:5000, con la 
 
 ### 1. Base de datos
 
-Crea la base de datos y ejecuta los scripts de `database/migrations` y luego `database/seeds`.
+Crea una base vacía. Desde la raíz del repositorio, carga `database/schema.sql`, aplica las migraciones incrementales con `npm run migrate` en `backend` y carga `database/seed/contenido.sql`. Necesitas el cliente `psql` para importar los SQL. Por ejemplo, en Bash, con una base local:
+
+```bash
+export DATABASE_URL='postgresql://usuario:clave@localhost:5432/yacharu'
+export DATABASE_SSL=false
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f database/schema.sql
+(cd backend && npm ci && npm run migrate)
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f database/seed/contenido.sql
+```
+
+Reemplaza usuario, clave y nombre de base por los tuyos. Para Neon usa su cadena de conexión con SSL. El contenido inicial se carga una vez en una base nueva; no ejecutes semillas antiguas sobre una base con estudiantes.
 
 ### 2. Backend
 
@@ -72,7 +82,7 @@ npm run dev
 
 El servidor queda en `http://localhost:5000` (prueba `http://localhost:5000/health`).
 
-Variables obligatorias en `backend/.env`: `DATABASE_URL`, `JWT_SECRET` y `SESSION_SECRET`. El resto (Google, Facebook, Cloudinary, Resend) solo hace falta para esas funciones. Mira `backend/.env.example`.
+Variables obligatorias en `backend/.env`: `DATABASE_URL`, `JWT_SECRET` y `SESSION_SECRET`. El resto (Google, Facebook, Cloudinary, Brevo) solo hace falta para esas funciones. Mira `backend/.env.example`.
 
 ### 3. Frontend
 
@@ -94,15 +104,17 @@ La app queda en `http://localhost:5173`.
 
 Las contraseñas y claves **nunca** se escriben en el código: van en archivos `.env`, que están en `.gitignore`.
 
+`database/` incluye únicamente estructura, contenido educativo y muestras sintéticas; consulta [qué contiene cada archivo](database/README.md). Antes de compartir cambios ejecuta `node tools/check-publication.mjs`. La [guía de publicación](docs/publicacion.md) explica la preparación del repositorio y las credenciales detectadas en un commit antiguo que deben revocarse si siguen vigentes.
+
 ## Autor
 
 Proyecto desarrollado por [FLOR345](https://github.com/FLOR345) para el curso de Desarrollo de Software II.
 
 ## Licencia
 
-- **Código:** [MIT](LICENSE). Puedes usarlo, modificarlo y redistribuirlo, manteniendo el aviso de copyright.
-- **Efectos visuales** (`frontend/src/components/fx/`): escritos para YachAru, con la misma licencia MIT del código.
-- **Contenido lingüístico** (vocabulario, ejercicios y textos culturales): no está cubierto por la licencia MIT. El vocabulario aymara viene de la lista de aymara central de Félix Layme Pairumani en el Intercontinental Dictionary Series (CC BY 4.0); ver `languages/aymara/README.md`.
+- **Código:** [AGPL-3.0-or-later](LICENSE). Puedes usarlo, modificarlo y redistribuirlo bajo sus condiciones. Al distribuir una versión modificada cubierta, proporciona su código fuente correspondiente; si las personas interactúan con tu versión modificada por una red, ofréceles ese código de forma visible y gratuita (sección 13).
+- **Efectos visuales** (`frontend/src/components/fx/`): escritos para YachAru, con la misma licencia AGPL-3.0 del código.
+- **Contenido lingüístico** (vocabulario, ejercicios y textos culturales): no está cubierto por la licencia AGPL. El vocabulario aymara viene de la lista de aymara central de Félix Layme Pairumani en el Intercontinental Dictionary Series (CC BY 4.0); ver `languages/aymara/README.md`.
 
 ## Voz, evidencia y publicación
 

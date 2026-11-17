@@ -1,6 +1,6 @@
 # Licencia del audio
 
-El código de YachAru es MIT (ver `LICENSE`). El audio tiene licencias propias.
+El código de YachAru es AGPL-3.0-or-later (ver `LICENSE`). El audio tiene licencias propias.
 
 ## Audio generado (`simiaru/audio/` en Cloudinary)
 
@@ -12,4 +12,4 @@ Es una voz sintética, no la de un hablante nativo. No se permite su uso comerci
 
 ## Voces grabadas
 
-Las grabaciones insertadas directamente en la plataforma no provienen de esos modelos, no están cubiertas por la licencia MIT y conservan los derechos de quienes las grabaron.
+Las grabaciones insertadas directamente en la plataforma no provienen de esos modelos, no están cubiertas por la licencia AGPL y conservan los derechos de quienes las grabaron.

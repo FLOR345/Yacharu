@@ -6,7 +6,7 @@ import { preloadOn, Register, Login, Dashboard, Dictionary } from '../routes';
 import { AnimatePresence, useReducedMotion } from 'motion/react';
 import * as m from 'motion/react-m';
 import Reveal from '../ui/Reveal';
-// Efectos visuales propios de YachAru (components/fx, licencia MIT del proyecto)
+// Efectos visuales propios de YachAru (components/fx, licencia AGPL-3.0-or-later del proyecto)
 import { CountUp, SpotlightCard, TiltedCard, BlurText, AnimatedContent, RotatingText } from '../ui/lazyBits';
 import Magnet from '../components/fx/Magnet';
 import ShinyText from '../components/fx/ShinyText';
@@ -1134,7 +1134,7 @@ const Home = ({ enableGuestMode }) => {
                 <li><a href="#proyecto" className={footerLink}>Sobre YachAru</a></li>
                 <li><a href={REPO} target="_blank" rel="noopener noreferrer" className={footerLink}>Código en GitHub</a></li>
                 <li><a href={`${REPO}/issues`} target="_blank" rel="noopener noreferrer" className={footerLink}>Reportar un problema</a></li>
-                <li><a href={`${REPO}/blob/main/LICENSE`} target="_blank" rel="noopener noreferrer" className={footerLink}>Licencia MIT</a></li>
+                <li><a href={`${REPO}/blob/main/LICENSE`} target="_blank" rel="noopener noreferrer" className={footerLink}>Licencia AGPL-3.0 o posterior</a></li>
               </ul>
             </nav>
           </div>

@@ -3,11 +3,39 @@ node_modules/
 */node_modules/
 
 # Variables de entorno (IMPORTANTE - contiene contraseñas)
-.env
-.env.local
-.env.production
-backend/.env
-frontend/.env
+.env*
+!.env.example
+
+# Credenciales y respaldos privados
+*.pem
+*.key
+*.p12
+*.pfx
+*.dump
+*.backup
+*.bak
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+*.sql.zip
+backups/
+exports/
+
+# Base de datos pública: solo estructura, contenido educativo y muestras sintéticas
+/database/*
+!/database/README.md
+!/database/schema.sql
+!/database/migrations/
+!/database/seed/
+!/database/samples/
+/database/migrations/*
+!/database/migrations/[0-9][0-9][0-9]_*.sql
+/database/seed/*
+!/database/seed/contenido.sql
+/database/samples/*
+!/database/samples/eventos_sinteticos.csv
+!/database/samples/eventos_sinteticos.json
 
 # Logs
 *.log
@@ -32,8 +60,11 @@ Thumbs.db
 .taste-skill/
 .claude/
 frontend/assets/
+.revision-local/
 
 # Audio MMS: entorno de Python y audios generados localmente
 tools/tts/.venv/
+.venv/
 tools/tts/salida/
 tools/tts/__pycache__/
+__pycache__/

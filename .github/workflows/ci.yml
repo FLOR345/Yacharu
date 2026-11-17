@@ -6,6 +6,17 @@ on:
   pull_request:
 
 jobs:
+  publication:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test tools/check-publication.test.mjs
+      - name: Comprobar archivos públicos sin datos privados ni secretos detectados
+        run: node tools/check-publication.mjs
+
   backend:
     runs-on: ubuntu-latest
     services:
