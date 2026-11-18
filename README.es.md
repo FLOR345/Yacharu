@@ -4,11 +4,11 @@
 
 **YachAru** es una aplicación web para aprender **quechua** y **aymara**, las lenguas originarias de los Andes. Ofrece lecciones por unidades, un diccionario, contenido cultural, seguimiento de progreso y notificaciones.
 
-> *Yachay* significa "aprender, saber" en quechua y *aru* significa "palabra, lengua" en aymara. Antes se llamaba SimiAru: las direcciones web conservan ese nombre.
+> *Yachay* significa "aprender, saber" en quechua y *aru* significa "palabra, lengua" en aymara. Antes se llamaba SimiAru: algunas direcciones web y nombres internos conservan ese nombre.
 
 ## Demo
 
-- Frontend: https://simiaru-3j6b.vercel.app
+- Frontend: https://yacharu-3j6b.vercel.app
 
 ## Tecnologías
 
@@ -104,15 +104,20 @@ La app queda en `http://localhost:5173`.
 
 Las contraseñas y claves **nunca** se escriben en el código: van en archivos `.env`, que están en `.gitignore`.
 
-`database/` incluye únicamente estructura, contenido educativo y muestras sintéticas; consulta [qué contiene cada archivo](database/README.md). Antes de compartir cambios ejecuta `node tools/check-publication.mjs`. La [guía de publicación](docs/publicacion.md) explica la preparación del repositorio y las credenciales detectadas en un commit antiguo que deben revocarse si siguen vigentes.
+`database/` incluye únicamente estructura, contenido educativo y muestras sintéticas; consulta [qué contiene cada archivo](database/README.md). Antes de compartir cambios ejecuta `node tools/check-publication.mjs`. La [guía de publicación](docs/publicacion.md) explica cómo preparar el repositorio.
 
-## Autor
+## Autores
 
-Proyecto desarrollado por [FLOR345](https://github.com/FLOR345) para el curso de Desarrollo de Software II.
+- **Flor Melany Yanarico Huanca**: Universidad Nacional del Altiplano, Puno, Perú ([FLOR345](https://github.com/FLOR345))
+- **Yeferson Dariun Laura Livise**: Universidad Nacional del Altiplano, Puno, Perú ([DariunLv](https://github.com/DariunLv))
+- **Kelly Luzgarda Yanarico Huanca**: Universidad César Vallejo, Perú
+
+Proyecto desarrollado en Puno, Perú, a partir del curso de Desarrollo de Software II.
 
 ## Licencia
 
 - **Código:** [AGPL-3.0-or-later](LICENSE). Puedes usarlo, modificarlo y redistribuirlo bajo sus condiciones. Al distribuir una versión modificada cubierta, proporciona su código fuente correspondiente; si las personas interactúan con tu versión modificada por una red, ofréceles ese código de forma visible y gratuita (sección 13).
+- **Audio generado:** [CC BY-NC 4.0](LICENSE-AUDIO.md), heredada de los modelos MMS.
 - **Efectos visuales** (`frontend/src/components/fx/`): escritos para YachAru, con la misma licencia AGPL-3.0 del código.
 - **Contenido lingüístico** (vocabulario, ejercicios y textos culturales): no está cubierto por la licencia AGPL. El vocabulario aymara viene de la lista de aymara central de Félix Layme Pairumani en el Intercontinental Dictionary Series (CC BY 4.0); ver `languages/aymara/README.md`.
 
