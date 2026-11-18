@@ -4,7 +4,7 @@
 
 *Yachay* means "to learn, to know" in Quechua and *aru* means "word, language" in Aymara. The project was formerly named SimiAru; web addresses and some internal identifiers keep that name. YachAru was built in Puno, Peru, by Quechua speakers of the region, as a tool the language community can inspect, modify and reuse.
 
-[Versión en español](README.es.md) · Live demo: https://simiaru-3j6b.vercel.app
+[Versión en español](README.es.md) · Live demo: https://yacharu-3j6b.vercel.app
 
 ---
 
@@ -29,7 +29,7 @@ docker compose up --build
 
 - App: http://localhost:8080
 - API: http://localhost:5000/health
-- PostgreSQL: `localhost:5433` (user/password/db: `simiaru`)
+- PostgreSQL: `localhost:5433` (local development database only; settings in `docker-compose.yml`)
 
 The database is created from the real schema (`database/schema.sql`), the migrations (`database/migrations/`) and the content seed (`database/seed/contenido.sql`: 28 units, 98 lessons, 1,320 vocabulary rows, 902 exercises, 69 cultural texts; no personal data; current figures in `docs/cifras.md`).
 
@@ -105,7 +105,7 @@ docs/            documentation
 
 ## Before sharing code
 
-Before publishing changes, run `node tools/check-publication.mjs` from the repository root. See [database contents](database/README.md) and the [publication guide](docs/publicacion.md), including credentials found in an old commit that must be revoked if still active. Current database files contain structure, educational content and synthetic samples.
+Before publishing changes, run `node tools/check-publication.mjs` from the repository root. See [database contents](database/README.md) and the [publication guide](docs/publicacion.md). Current database files contain structure, educational content and synthetic samples.
 
 ## Licenses
 
@@ -118,6 +118,10 @@ Before publishing changes, run `node tools/check-publication.mjs` from the repos
 
 See [`CITATION.cff`](CITATION.cff).
 
-## Author
+## Authors
 
-Developed by [FLOR345](https://github.com/FLOR345) in Puno, Peru.
+- **Flor Melany Yanarico Huanca** — Universidad Nacional del Altiplano, Puno, Peru ([FLOR345](https://github.com/FLOR345))
+- **Yeferson Dariun Laura Livise** — Universidad Nacional del Altiplano, Puno, Peru ([DariunLv](https://github.com/DariunLv))
+- **Kelly Luzgarda Yanarico Huanca** — Universidad César Vallejo, Peru
+
+Developed in Puno, Peru.
